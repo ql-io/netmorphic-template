@@ -10,7 +10,11 @@
 	"cluster2": "",
 	"pause-stream":"",
 	"through":"",
-	"since-when":""
+	"since-when":"",
+	"netmorphic":"",
+	"scuttlebutt":"",
+	"ecstatic":"",
+	"http-proxy":""
   },
   "repository": {
     "type": "git",
