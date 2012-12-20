@@ -1,3 +1,10 @@
+/*
+
+	This is a sample custom handler used in the demo
+
+*/
+
+
 var ps = require('pause-stream');
 var through = require('through');
 var Time = require('since-when');

@@ -5,19 +5,10 @@
 	        "port":3200,
 	        "type":"internet",
 			"method":"GET",
-	        "latency":0
+	        "latency":0,
+			"hi": 5000,
+			"lo": 1000
 		},
 		"addresses" : ["127.0.0.1", "0.0.0.0"]
-	},
-	
-	"Sales" : {
-		"/{x}?/{y}":{
-			"host":"127.0.0.1",
-	        "port":3200,
-	        "url":"/test.json",
-	        "type":"bananas",
-			"method":"GET"
-		},
-		"addresses" : ["5.5.5.5.5"]
 	}
 }

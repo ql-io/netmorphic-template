@@ -1,17 +1,9 @@
-var TCProxy = require('netmorphic').tcp
-, monitor = require('netmorphic').monitor;
-
-var Cluster = require('cluster2');
-var fs = require('fs');
-var internet = require('./handlers');
+var TCProxy = require('../../netmorphic-1').tcp
 var config = require('./config.json');
+var CUSTOM_HANDLERS = false
+var USE_CLUSTER = true;
 
-var servers = TCProxy(config, internet, false)
+var servers = TCProxy(config, CUSTOM_HANDLERS, USE_CLUSTER)
 
-var cluster = new Cluster({
-	monitor: monitor
-});
-	
-cluster.listen(function(cb) {
-	cb(servers);
-});
+module.exports = servers
+
