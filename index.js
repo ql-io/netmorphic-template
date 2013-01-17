@@ -1,4 +1,4 @@
-var monitor = require('../netmorphic-1').monitor(3100)
+var monitor = require('netmorphic').monitor(3100)
 var netmorphic = require('netmorphic').proxy
   , Cluster = require('cluster2')
   , config = require('./config.json')
