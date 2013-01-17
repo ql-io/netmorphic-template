@@ -1,23 +1,15 @@
-var monitor = require('../netmorphic-1').monitor()
-var netMorphic_http = require('./http/index')
-  , netMorphic_tcp = require('./tcp/index')
+var monitor = require('../netmorphic-1').monitor(3100)
+var netmorphic = require('netmorphic').proxy
   , Cluster = require('cluster2')
+  , config = require('./config.json')
+  , customHandlers = null
+  , clustered = true
+  , httPort = 3201
+  , servers = netmorphic(config, customHandlers, clustered, httPort)
+  , cluster = new Cluster({
+	  monitor: monitor
+    })
 ;
-
-var servers = []
-
-netMorphic_tcp.forEach(function(e){
-	 servers.push(e)
-})
-
-servers.push({
-	app: netMorphic_http.proxy, 
-	port : 3201
-})
-
-var cluster = new Cluster({
-	monitor: monitor
-});
 	
 cluster.listen(function(cb) {
     cb(servers);
