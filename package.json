@@ -11,7 +11,7 @@
 	"pause-stream":"",
 	"through":"",
 	"since-when":"",
-	"netmorphic":"git://github.com/NHQ/netmorphic-1.git",
+	"netmorphic":"",
 	"scuttlebutt":"",
 	"ecstatic":"",
 	"http-proxy":""
