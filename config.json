@@ -1,0 +1,20 @@
+{
+	"/slow":{
+		"host": "nodejs.org",
+		"port": 80,
+		"url": "/",
+		"type":"slow",
+		"https": false,
+		"method":"GET",
+		"latency" : 2000
+	},
+	"100002":{
+		"host": "nodejs.org",
+		"port": 80,
+		"url": "/",
+		"type":"slow",
+		"https": false,
+		"method":"GET",
+		"latency" : 2000
+	}
+}

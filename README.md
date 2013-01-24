@@ -1,7 +1,12 @@
-Running the index.js will start netmorphic in cluster2 with http and tcp proxies.
+# template
 
-You can edit either the http or the tcp in their respective directories.
+Clone this repo, replace the config file with your own and then
 
-The config files and handlers are samples.
+```bash
+npm install .
+```
 
-Documentation on configuration and custom handlers coming soon.
+followed by
+```bash
+node index
+```
