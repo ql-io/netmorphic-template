@@ -10,6 +10,16 @@ var netmorphic = require('netmorphic').proxy
 	  monitor: monitor
     })
 ;
+
+servers.forEach(function(e){
+	var server = e.app;
+	server.on('netmorphic-begin-event', function(event){
+		console.log(event)
+	});
+	server.on('netmorphic-end-event', function(event){
+		console.log(event)
+	})
+})
 	
 cluster.listen(function(cb) {
     cb(servers);
