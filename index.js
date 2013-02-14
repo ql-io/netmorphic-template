@@ -16,14 +16,14 @@ var netmorphic = require('netmorphic').proxy
 // IF YOU WANT HTTPS, UNCOMMENT BELOW AND CHANGE RELATIVE FILE PATHS (from this dir) TO YOUR KEY AND CERT FILES
 // YOU ALSO NEED TO SET https: true IN YOUR CONFIG FOR HTTPS ROUTES
 
-/*
+
 
 var certs = {
-  	key:  '../PATH/TO/KEY.pem',
-  	cert: '../PATH/TO/CERT.pem'
+  	key:  './certs/proxy.key',
+  	cert: './certs/proxy.crt'
 };
 
-*/
+
 
 
 var servers = netmorphic(config, customHandlers, clustered, httPort, httpsPort, certs)

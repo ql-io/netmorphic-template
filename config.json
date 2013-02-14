@@ -1,6 +1,6 @@
 {
 	"/slow":{
-		"host": "encrypted.google.com",
+		"host": "www.ebayopensource.org",
 		"port": 443,
 		"url": "/",
 		"type":"slow",
@@ -8,7 +8,16 @@
 		"method":"GET",
 		"latency" : 2000
 	},
-	"100002":{
+        "/slow1":{
+                "host": "www.google.com",
+                "port": 80,
+                "url": "/",
+                "type":"slow",
+                "https": true,
+                "method":"GET",
+                "latency" : 2000
+        },
+	"8036":{
 		"host": "nodejs.org",
 		"port": 80,
 		"url": "/",
